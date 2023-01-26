@@ -1,11 +1,13 @@
 from flask import Flask, render_template, url_for, request, redirect
 import csv
 app = Flask(__name__)
-print(__name__)
 
 @app.route('/')
 def home():
     return render_template('index.html')
+@app.route('/elements')
+def elements():
+    return render_template('elements.html')
 
 @app.route('/<string:page_name>')
 def html_page(page_name):
@@ -34,3 +36,9 @@ def submit_form():
         return redirect('/thankyou.html#thankyou')
     else:
         return 'something went wrong'
+
+@app.route('/colorgame')
+
+@app.route('/yelpcamp')
+def yelp():
+    return 0
