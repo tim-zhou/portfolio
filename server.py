@@ -37,8 +37,6 @@ def submit_form():
     else:
         return 'something went wrong'
 
-@app.route('/colorgame')
-
-@app.route('/yelpcamp')
+@app.route('/yelpcamp', methods=['GET'])
 def yelp():
-    return 0
+    return redirect("https://yelp-camp-jo67.onrender.com", code=302)
